@@ -1,0 +1,121 @@
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: 5rem; 
+}
+
+/* Background floating shapes */
+.shape {
+  position: absolute;
+  filter: blur(60px);
+  z-index: 0;
+  opacity: 0.5;
+  border-radius: 50%;
+  animation: pulse-glow 10s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+.shape-1 {
+  width: 400px;
+  height: 400px;
+  background: var(--accent-primary);
+  top: -100px;
+  right: -100px;
+  animation-duration: 12s;
+}
+
+.shape-2 {
+  width: 300px;
+  height: 300px;
+  background: var(--accent-secondary);
+  bottom: 10%;
+  left: -50px;
+  animation-duration: 15s;
+  animation-delay: -5s;
+}
+
+.shape-3 {
+  width: 200px;
+  height: 200px;
+  background: var(--accent-tertiary);
+  top: 40%;
+  right: 20%;
+  animation-duration: 8s;
+  animation-delay: -2s;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.glow-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, rgba(99, 102, 241, 0) 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.greeting {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.name {
+  font-size: 5.5rem;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  letter-spacing: -2px;
+}
+
+.title {
+  font-size: 2.5rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.summary {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+  max-width: 650px;
+  line-height: 1.8;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.social-links a {
+  color: var(--text-secondary);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+
+.social-links a:hover {
+  color: var(--text-primary);
+  transform: translateY(-5px); /* slightly more lift */
+}
+
+@media (max-width: 768px) {
+  .name { font-size: 3.5rem; }
+  .title { font-size: 1.8rem; }
+  .hero-actions { flex-direction: column; }
+}
