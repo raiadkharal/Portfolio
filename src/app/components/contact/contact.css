@@ -45,7 +45,7 @@
 }
 
 .form-control {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--glass-hover);
   border: 1px solid var(--glass-border);
   border-radius: 8px;
   padding: 1rem;
@@ -57,12 +57,12 @@
 }
 
 .form-control::placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--glass-text-muted);
 }
 
 .form-control:focus {
   border-color: var(--accent-secondary);
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--glass-focus);
   box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15); /* Indigo */
 }
 

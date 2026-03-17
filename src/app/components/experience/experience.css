@@ -57,6 +57,11 @@
   font-weight: 500;
 }
 
+.timeline-item:hover .timeline-dot {
+  background: var(--accent-primary);
+  border-color: var(--glass-hover);
+}
+
 .duration {
   font-size: 0.9rem;
   color: var(--text-secondary);

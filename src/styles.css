@@ -15,7 +15,11 @@
   --glass-bg: rgba(255, 255, 255, 0.03);
   --glass-border: rgba(255, 255, 255, 0.05);
   --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-  
+  --glass-hover: rgba(255, 255, 255, 0.05);
+  --glass-border-strong: rgba(255, 255, 255, 0.1);
+  --glass-focus: rgba(255, 255, 255, 0.08);
+  --glass-text-muted: rgba(255, 255, 255, 0.3);
+
   /* Typography */
   --font-heading: 'Outfit', sans-serif;
   --font-body: 'Inter', sans-serif;
@@ -28,6 +32,21 @@
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.5s ease;
+}
+
+body.light-theme {
+  --bg-color: #f8fafc;
+  --bg-secondary: #ffffff;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  
+  --glass-bg: rgba(0, 0, 0, 0.02);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+  --glass-hover: rgba(0, 0, 0, 0.05);
+  --glass-border-strong: rgba(0, 0, 0, 0.15);
+  --glass-focus: rgba(0, 0, 0, 0.08);
+  --glass-text-muted: rgba(0, 0, 0, 0.5);
 }
 
 * {
@@ -105,14 +124,14 @@ button {
   border-radius: 30px;
   font-weight: 600;
   transition: all var(--transition-fast);
-  border: 1px solid rgba(255,255,255,0.1);
-  background: rgba(255,255,255,0.05);
+  border: 1px solid var(--glass-border-strong);
+  background: var(--glass-hover);
   display: inline-block;
   color: var(--text-primary);
 }
 
 .btn-secondary:hover {
-  background: rgba(255,255,255,0.1);
+  background: var(--glass-border-strong);
   transform: translateY(-2px);
 }
 
@@ -147,7 +166,7 @@ button {
 
 .glass-card:hover {
   transform: translateY(-5px);
-  border-color: rgba(255, 255, 255, 0.1);
+  border-color: var(--glass-border-strong);
 }
 
 /* Scroll Animations */
